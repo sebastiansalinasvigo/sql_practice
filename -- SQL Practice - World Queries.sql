@@ -28,3 +28,15 @@ SELECT name, ROUND(population / area, 2) AS density
 FROM world
 WHERE continent = 'Asia'
 ORDER BY density DESC;
+
+-- Exercise 4: Countries with 'o' in name and population over 50 million
+SELECT name, population
+FROM world
+WHERE name LIKE '%o%' AND population > 50000000
+ORDER BY name;
+
+-- Exercise 5: Countries with area between 500,000 and 2,000,000 km²
+SELECT name, area
+FROM world
+WHERE area BETWEEN 500000 AND 2000000
+ORDER BY area DESC;
